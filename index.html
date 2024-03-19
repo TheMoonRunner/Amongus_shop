@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amogus Shop</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">   
+    <link rel="icon" href="images/menu-1.png">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body>
+    <section ng-app="myApp">
+    <section ng-controller="MyController">
+        <script>
+            // Definir la aplicación de Angular
+            var app = angular.module('myApp', []);
+            
+            // Definir un controlador de Angular
+            app.controller('MyController', function($scope) {
+              $scope.message = "Hola desde Angular!";
+              
+              $scope.changeMessage = function() {
+                $scope.message = "Mensaje cambiado!";
+              };
+            });
+          </script>
+          
+        <span>{{ message }}</span>
+        <button ng-click="changeMessage()">Hola angularjs</button>
+          
+
+    <header class="header">
+
+        <a href="#" class="logo">
+            <img src="images/logo.png">
+        </a>
+
+        <nav class="navbar">
+            <a href="#home">Principal</a>
+            <a href="#about">nosotros</a>
+            <a href="#menu">amongos</a>
+            <a href="#products">productos</a>
+            <a href="#review">reseñas</a>
+            <a href="#contact">contacto</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <div class="search-form">
+            <form id="f1" name="f1" action="javascript:void()" onsubmit="if(this.t1.value!=null && this.t1.value!='')
+            parent.findString(this.t1.value);return false;">
+            <input type="search" id="t1" name="t1" placeholder="busca aqui...">
+            <input type="submit" id="search-box" name="b1" value="Find" hidden>
+            <label for="search-box" class="fas fa-search"></label>
+            </form>
+        </div>
+        <div class="cart-items-container">
+            <ul id="cart-items"></ul>
+            <a>Total: $<span id="total">0</span></a>
+            <a href="https://gifer.com/embed/YQDj" class="checkout-btn">Pagar</a>
+        </div>
+
+    </header>
+
+    <section class="home" id="home">
+
+        <div class="content">
+            <h3>encuentra tu tripulante interior</h3>
+            <p>Experimenta la revolucion, desencadena a tu tripulante interior y encuentra al impostor con la mejor tecnologia y diseño captivante</p>
+            <a href="#menu" class="checkout-btn">compra ya</a>
+        </div>
+
+    </section>
+
+    <section class="about" id="about">
+
+        <h1 class="heading"><span>sobre</span> nosotros</h1>
+        
+        <div class="row">
+            <div class="image">
+                <img src="images/about-img.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>por que amogus?</h3>
+                <p>sabias que, la amoga lisa, una de las obras de arte mas reconocida en el mundo, fue creada por amogus da vinci durante el renacimiento. Es conocida por su sonrisa enigmatica y ha sido sujeto de fascinacion y especulacion durante siglos</p>
+                <p>entre el caos de la sospecha y el engaño, los amogus nos mantienen juntos.</p>
+                <a href="https://www.innersloth.com/games/among-us/" class="btn">Aprende Mas</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="menu" id="menu">
+
+        <h1 class="heading">nuestros <span>amongos</span></h1>
+
+        <div class="box-container">
+
+            <div class="box" data-item-id="1" data-price="19.990">
+                <img src="images/menu-1.png" alt="">
+                <h3>Amongo Rojo</h3>
+                <div class="price">$19.990 <span>25.000</span></div>
+                <a class="cart-btn" id="cart-btn">añadir al carro</a>
+            </div>
+
+            <div class="box" data-item-id="2" data-price="14.990">
+                <img src="images/menu-2.png" alt="">
+                <h3>Amongo Azul</h3>
+                <div class="price">$14.990 <span>20.000</span></div>
+                <a class="cart-btn" id="cart-btn">añadir al carro</a>
+            </div>
+
+            <div class="box" data-item-id="3" data-price="1">
+                <img src="images/menu-3.png"alt="">
+                <h3>Amongo Amarillo</h3>
+                <div class="price">$1 <span>????</span></div>
+                <a class="cart-btn" id="cart-btn">añadir al carro</a>
+            </div>
+
+            <div class="box" data-item-id="4" data-price="99.990">
+                <img src="images/menu-4.png" alt="">
+                <h3>Amongo Verde</h3>
+                <div class="price">$99.990 <span>150.000</span></div>
+                <a class="cart-btn" id="cart-btn">añadir al carro</a>
+            </div>
+
+            <div class="box" data-item-id="5" data-price="29.990">
+                <img src="images/menu-5.png" alt="">
+                <h3>Amongo Naranja</h3>
+                <div class="price">$29.990 <span>40.000</span></div>
+                <a class="cart-btn" id="cart-btn">añadir al carro</a>
+            </div>
+
+            <div class="box" data-item-id="6" data-price="249.990">
+                <img src="images/menu-6.png" alt="">
+                <h3>Amongo Morado</h3>
+                <div class="price">$249.990 <span>20.000</span></div>
+                <a class="cart-btn" id="cart-btn">añadir al carro</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="products" id="products">
+
+        <h1 class="heading">nuestros <span>productos</span></h1>
+
+        <div class="box-container">
+
+            <div class="box" data-item-id="7" data-price="29.990" >
+                <div class="icons">
+                    <a class="fas fa-shopping-cart" id="cart-btn"></a>
+                    <a href="https://www.innersloth.com/games/among-us/" class="fas fa-heart"></a>
+                    <a href="https://www.youtube.com/watch?v=obmlZH3X9gs" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/product-1-1.png" alt="#">
+                </div>
+                <div class="content">
+                    <h3>polera amongo rojo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">$29.990 <span>$35.000</span></div>
+                </div>
+            </div>
+
+            <div class="box" data-item-id="8" data-price="49.990" >
+                <div class="icons">
+                    <a id="cart-btn" class="fas fa-shopping-cart"></a>
+                    <a href="https://www.innersloth.com/games/among-us/" class="fas fa-heart"></a>
+                    <a href="https://www.youtube.com/watch?v=obmlZH3X9gs" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/product-2-2.png" alt="#">
+                </div>
+                <div class="content">
+                    <h3>polera amongo azul</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="price">$49.990 <span>$60.000</span></div>
+                </div>
+            </div>
+
+            <div class="box" data-item-id="9" data-price="14.990">
+                <div class="icons">
+                    <a class="fas fa-shopping-cart" id="cart-btn"></a>
+                    <a href="https://www.innersloth.com/games/among-us/" class="fas fa-heart"></a>
+                    <a href="https://www.youtube.com/watch?v=obmlZH3X9gs" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="images/product-3-3.png" alt="#">
+                </div>
+                <div class="content">
+                    <h3>polera amongo amarillo</h3>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <div class="price">$14.990 <span>$40.000</span></div>
+                </div>
+            </div>
+
+            
+
+        </div>
+
+    </section>
+
+    <section class="review" id="review">
+
+        <h1 class="heading"> reseñas de <span>clientes</span></h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="#" class="quote">
+                <p>Por tan solo $4000 seras suministrado con quien-sabe-que cantidades de daño cerebral. 5/5 volveria a perder la fe en la humanidad.</p>
+                <img src="images/pic-1.png" alt="#" class="user">
+                <h3>Shinies</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="#" class="quote">
+                <p>4.5/5 tengo 8 amigos menos ahora...</p>
+                <img src="images/pic-2.png" alt="#" class="user">
+                <h3>Dr.FatMonkey</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/quote-img.png" alt="#" class="quote">
+                <p>cuando ellel cundo le limostor tinewn sus sus cuando el postor amog us ventilacion palabra sociedad</p>
+                <img src="images/pic-3.png" alt="#" class="user">
+                <h3>It's a me....Mario...</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+<section class="contact" id="contact">
+    <h1 class="heading"><span>contac</span>tanos</h1>
+    <div class="row">
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.4252572552145!2d-70.62142592333089!3d-33.490311414527206!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d006eb6d4865%3A0xa821e7eea1660626!2sInacap%20Santiago%20Sur!5e0!3m2!1ses!2scl!4v1685071210799!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+        <form action="mailto:sebastian.escobar43@inacapmail.cl" method="post" enctype="text/plain">
+            <h3> háblanos </h3>
+            <div class= "inputBox">
+                <span class="fas fa-user"></span>
+                <input type="text" name="nombre" placeholder="nombre">
+            </div>
+            <div class= "inputBox">
+                <span class="fas fa-envelope"></span>
+                <input type="email" name="email" placeholder="email">
+            </div>
+            <div class= "inputBox">
+                <span class="fas fa-phone"></span>
+                <input type="number" name="numero" placeholder="numero">
+            </div>
+            <input type="submit" value="contactanos" class="btn">
+
+        </form>
+    
+    </div>
+</section>
+
+
+<section class="blogs" id="blogs">
+    <h1 class="heading"> nuestros <span>blogs</span> </h1>
+
+    <div class="box-container">
+
+        <div class="box">  
+            <div class="image">                
+                <img src="images\blog1.png" alt="">
+            </div>    
+                        <div class="content">
+                            <a href="#" class="title"> El verde es el impostor</a>
+                            <span>by Sebas - Octavio - JuliTaChiquita - Mahui / julio - 2023 3er semestre</span>
+                            <p>Perro loco a la que te criaste, lo logramos.</p>
+                            <a href="https://twitter.com/BoniTrash/status/1458940203821723666/photo/3" class="btn"> Leer para mas información</a>
+                        </div>
+                 </div>
+
+        <div class="box">  
+            <div class="image">              
+                <img src="images\blog2.png" alt="">   
+            </div>            
+                    <div class="content">
+                        <a href="#" class="title"> El rojo fue, lo vi en el reactor</a>
+                        <span>by Sebas - Octavio - JuliTaChiquita - Mahui / julio - 2023 3er semestre</span>
+                        <p>Perro loco a la que te criaste, lo logramos.</p>
+                        <a href="https://twitter.com/BoniTrash/status/1458940203821723666/photo/2" class="btn"> Leer para mas información</a>
+                    </div>            
+        </div>
+
+        <div class="box">  
+            <div class="image">                
+                <img src="images\blog3.png" alt="">
+            </div>
+                <div class="content">
+                    <a href="#" class="title"> El azul entro a la ventilacion</a>
+                    <span>by Sebas - Octavio - JuliTaChiquita - Mahui / julio - 2023 3er semestre</span>
+                    <p>Perro loco a la que te criaste, lo logramos.</p>
+                    <a href="https://twitter.com/BoniTrash/status/1458940203821723666/photo/1" class="btn"> Leer para mas información</a>
+                </div>       
+        </div>
+    </div>
+
+
+
+
+
+</section>
+
+
+<section class="footer">
+
+    <div class="share">
+        <a href="https://www.facebook.com/Innersloth/" class="fab fa-facebook-f"></a>
+        <a href="https://twitter.com/AmongUsGame?s=20" class="fab fa-twitter"></a>
+        <a href="https://www.instagram.com/innerslothdevs/?hl=en" class="fab fa-instagram"></a>
+        <a href="https://www.youtube.com/channel/UCn0QAnNB_vHr7Pry3Vo72lg" class="fab fa-youtube"></a>
+        <a href="https://www.linkedin.com/company/innersloth" class="fab fa-linkedin"></a>
+    </div>
+    <div class="links">
+        <a href="#">Principal</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Amongos</a>
+        <a href="#">productos</a>
+        <a href="#">Reseñas</a>
+        <a href="#">contacto</a>
+        <a href="#">blogs</a>
+    </div>
+    <div class="credit">creado por El duo  dinamico <span> Los extraterrestres Seba y Octavio y las más pulentas JuliTaChiquita y la Mahui</span> | Todos los derechos reservados</div>
+
+
+</section>
+
+ <!-- Agregar una sección de Angular -->
+ <section ng-controller="MyController">
+    <span>{{ No olvidar que embeces está dura la vida }}</span>
+    <button ng-click="changeMessage()">Cambiar Mensaje a uno más pesimista</button>
+</section>
+
+<!-- Scripts de Angular -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script>
+    // Definir la aplicación de Angular
+    var app = angular.module('myApp', []);
+    
+    // Definir un controlador de Angular
+    app.controller('MyController', function($scope) {
+        $scope.message = "Hola desde Angular!";
+        
+        $scope.changeMessage = function() {
+            $scope.message = "Mensaje cambiado!";
+        };
+    });
+</script>
+
+
+
+
+
+
+
+
+ <script src="js/script.js"></script>
+</body>
+</html>
